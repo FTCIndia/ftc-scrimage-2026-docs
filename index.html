@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pit Showcase Awards</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<style>
+/* Modelled on the FTC Competition Manual: white page, teal table headers, numbered headings with a rule above,
+   italic centred table captions, orange note boxes. */
+:root{
+  color-scheme:light;
+  --bg:#ffffff; --alt:#f3f5f9; --ink:#1b212b; --muted:#535d6b; --rule:#9aa5b5; --grid:#8994a6; --line:#d7dde8;
+  --teal:#173b6c; --teal-ink:#ffffff; --teal-tint:#e8eef8; --link:#1a5fb4;
+  --orange:#d9701a; --orange-tint:#fff5ea; --green:#173b6c;
+  --hover:#eff3fa;
+  --sans:"Roboto","Helvetica Neue",Arial,sans-serif;
+  --offset:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;margin:0}
+h1,h2,h3,h4,p{margin:0}
+a{color:var(--link)}
+:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+.topbar{display:none}
+
+.layout{max-width:1180px;margin-inline:auto;padding-inline:16px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:48px}
+main{padding-block:40px 80px;min-width:0}
+
+/* contents */
+.toc{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;padding-block:40px 32px;font-size:13.5px;border-right:1px solid var(--line);padding-right:16px}
+.toc .doc{font-weight:700;font-size:14px;line-height:1.35;padding-bottom:12px;margin-bottom:6px;border-bottom:2px solid var(--teal);color:var(--teal)}
+.toc .doc small{display:block;font-weight:400;color:var(--muted);font-size:12.5px;margin-top:2px}
+.toc .pl{font-size:12px;font-weight:700;color:var(--ink);margin:16px 0 4px}
+.toc ul{list-style:none;margin:0;padding:0}
+.toc a{display:block;color:var(--ink);text-decoration:none;padding:4px 8px;border-left:3px solid transparent;line-height:1.4}
+.toc a:hover{background:var(--hover)}
+.toc a.on{border-left-color:var(--orange);background:var(--teal-tint);font-weight:700;color:var(--teal)}
+.toc ul ul a{padding-left:34px;font-size:13px}
+.toc .no{display:inline-block;min-width:38px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.toc a.on .no{color:var(--teal)}
+
+/* title block */
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+h1{font-size:clamp(28px,4.4vw,36px);font-weight:700;line-height:1.15;margin-top:6px;color:var(--teal);text-wrap:balance}
+.subtitle{margin-top:10px;color:var(--muted);font-size:16.5px;max-width:66ch}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin:22px 0 0;border:1px solid var(--grid)}
+.facts div{padding:9px 14px;border-left:1px solid var(--grid)}
+.facts div:first-child{border-left:0}
+.facts dt{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:1px 0 0;font-weight:500}
+dl{margin:0}
+
+/* headings: numbered, with a rule above, as in the manual */
+.part{padding-top:44px;scroll-margin-top:var(--offset)}
+.part-head{padding-bottom:10px;border-bottom:3px solid var(--teal)}
+.part-head .k{display:block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+h2{font-size:clamp(23px,3.4vw,28px);font-weight:700;color:var(--teal);margin-top:2px}
+.sec{margin-top:30px;padding-top:12px;border-top:1px solid var(--rule);scroll-margin-top:var(--offset)}
+h3{font-size:19px;font-weight:700;margin-bottom:12px;display:flex;gap:16px;align-items:baseline;color:var(--ink)}
+h3 .no{font-size:19px;font-weight:700;color:var(--teal);font-variant-numeric:tabular-nums;min-width:40px}
+.lead{max-width:74ch}
+
+/* notes: orange boxes */
+.callout,.note{margin-top:16px;border:1px solid var(--orange);border-left-width:5px;background:var(--orange-tint);padding:10px 14px;font-size:14px;max-width:none;color:var(--ink)}
+.callout b,.note b{color:#a4520c}
+
+/* tables */
+.cap{font-style:italic;font-size:13px;color:var(--muted);text-align:center;margin:20px 0 6px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+th,td{border:1px solid var(--grid);padding:8px 12px;vertical-align:top;text-align:left}
+thead th{background:var(--teal);color:var(--teal-ink);font-size:14px;font-weight:700;border-color:var(--teal);border-right-color:#4d6b9b}
+thead th.mid{text-align:center;font-size:15px}
+tbody th{font-weight:700;white-space:nowrap;background:var(--alt)}
+td.n{width:44px;text-align:center;font-weight:500;color:var(--ink);font-variant-numeric:tabular-nums}
+td.pts{width:70px;text-align:center;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+td.type{width:112px;text-align:center;font-weight:700;white-space:nowrap;background:var(--alt)}
+td.type.e{font-weight:700;color:var(--ink)}
+td.t{width:104px;white-space:nowrap;font-weight:500;font-variant-numeric:tabular-nums}
+
+/* principles */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pr{border:1px solid var(--grid);padding:12px 16px;border-top:4px solid var(--teal)}
+.pr h4{font-size:15px;font-weight:700;margin-bottom:3px;color:var(--teal)}
+.pr p{font-size:14px;color:var(--ink)}
+
+/* accordions */
+.tools{display:flex;gap:8px;justify-content:flex-end;margin:0 0 10px}
+button{font:inherit;font-size:13px;font-weight:500;background:#fff;color:var(--teal);border:1px solid var(--teal);padding:5px 14px;cursor:pointer}
+button:hover{background:var(--teal-tint)}
+.cols,summary{display:grid;grid-template-columns:18px minmax(0,1fr) 172px 172px 92px;column-gap:14px;align-items:center}
+.cols{padding:0 16px 6px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.cols span:first-child{grid-column:2}
+details{border:1px solid var(--grid);margin-bottom:8px;overflow:hidden;scroll-margin-top:var(--offset);background:#fff}
+details[open]{border-color:var(--teal)}
+summary{list-style:none;cursor:pointer;padding:12px 16px;min-height:52px}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:var(--hover)}
+details[open] summary{background:var(--teal-tint);border-bottom:1px solid var(--teal)}
+.chev{width:8px;height:8px;border-right:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg);transition:transform .15s;justify-self:center}
+details[open] .chev{transform:rotate(45deg)}
+@media (prefers-reduced-motion:reduce){.chev{transition:none} html{scroll-behavior:auto}}
+.a-name{font-size:16px;font-weight:700;line-height:1.3;color:var(--ink)}
+.an{font-style:normal;color:var(--teal);margin-right:12px;font-variant-numeric:tabular-nums}
+.meta{display:contents}
+.ftc span{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:12.5px;font-weight:500;padding:2px 8px;line-height:1.35;background:#fff}
+.win{font-size:13.5px;color:var(--muted)}
+.sc{font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums}
+.a-body{padding:4px 18px 22px}
+.a-body .lead{margin-top:14px;font-size:14.5px}
+
+/* feedback */
+.gg{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
+.gg div{border:1px solid var(--grid);padding:10px 16px}
+.gg b{display:block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.gg div:nth-child(1) b{color:var(--green)}
+.gg div:nth-child(2) b{color:var(--orange)}
+.gg p{font-size:14px}
+
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:14px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between}
+
+@media (max-width:1080px){
+  :root{--offset:64px}
+  .layout{display:block}
+  .topbar{display:flex;position:sticky;top:0;z-index:20;align-items:center;gap:12px;background:var(--teal);color:#fff;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+  .topbar b{font-size:14px;font-weight:500;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .topbar button{background:transparent;color:#fff;border-color:#fff}
+  .topbar button:hover{background:rgba(255,255,255,.15)}
+  .toc{display:none;position:fixed;z-index:19;left:0;right:0;top:calc(52px + env(safe-area-inset-top,0px));max-height:calc(100vh - 60px);background:#fff;border-right:0;border-bottom:2px solid var(--teal);padding:6px 16px 16px;box-shadow:0 10px 24px rgba(0,0,0,.15)}
+  .toc.open{display:block}
+  .toc .doc{display:none}
+  main{padding-top:28px}
+}
+@media (max-width:720px){
+  .cols{display:none}
+  summary{grid-template-columns:18px minmax(0,1fr);row-gap:8px}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;grid-column:2}
+  .facts div{border-left:0;border-top:1px solid var(--grid)}
+  .facts div:first-child{border-top:0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <button type="button" id="menu" aria-expanded="false" aria-controls="toc">Contents</button>
+  <b>Pit Showcase 2026 Awards Criteria</b>
+</div>
+
+<div class="layout">
+
+<nav class="toc" id="toc" aria-label="Contents">
+  <div class="doc">Pit Showcase 2026<small>Awards criteria</small></div>
+
+  <div class="pl">Part 1: Judging process</div>
+  <ul>
+    <li><a href="#s-purpose"><span class="no">1.1</span>Purpose</a></li>
+    <li><a href="#s-principles"><span class="no">1.2</span>Principles</a></li>
+    <li><a href="#s-flow"><span class="no">1.3</span>Judging flow</a></li>
+    <li><a href="#s-docs"><span class="no">1.4</span>Documentation</a></li>
+    <li><a href="#s-scoring"><span class="no">1.5</span>Scoring and feedback</a></li>
+  </ul>
+
+  <div class="pl">Part 2: Awards</div>
+  <ul>
+    <li><a href="#s-glance"><span class="no">2.1</span>Awards at a glance</a></li>
+    <li><a href="#s-criteria"><span class="no">2.2</span>Award criteria</a>
+      <ul>
+        <li><a href="#a-best"><span class="no">2.2.1</span>Best Overall Team</a></li>
+        <li><a href="#a-eng"><span class="no">2.2.2</span>Engineering Excellence</a></li>
+        <li><a href="#a-impact"><span class="no">2.2.3</span>Team Impact</a></li>
+        <li><a href="#a-solver"><span class="no">2.2.4</span>Problem Solver</a></li>
+        <li><a href="#a-choice"><span class="no">2.2.5</span>People's Choice</a></li>
+      </ul>
+    </li>
+    <li><a href="#s-rules"><span class="no">2.3</span>Eligibility and rules</a></li>
+  </ul>
+</nav>
+
+<main>
+
+<header id="top">
+  <div class="eyebrow">FIRST Tech Challenge &middot; Rookie practice event</div>
+  <h1>Pit Showcase 2026: Awards Criteria</h1>
+  <p class="subtitle">A practice run of FTC judging, so every rookie team learns how to approach the season. Show us your team, your robot, your story.</p>
+  <dl class="facts">
+    <div><dt>Teams</dt><dd>About 20</dd></div>
+    <div><dt>Judges</dt><dd>6-8</dd></div>
+    <div><dt>Event hours</dt><dd>8:00 am - 6:00 pm</dd></div>
+    <div><dt>Robot</dt><dd>Need not be functional</dd></div>
+  </dl>
+</header>
+
+<!-- ===================== PART 1 ===================== -->
+<div class="part" id="part1">
+  <div class="part-head"><span class="k">Part 1</span><h2>Judging process</h2></div>
+
+  <section class="sec" id="s-purpose">
+    <h3><span class="no">1.1</span>Purpose</h3>
+    <p class="lead">The Pit Showcase mirrors the real FTC judging process: portfolio, interview, pit visit, deliberation. We judge thinking, planning and teamwork, not a finished robot. Every team leaves with feedback to grow.</p>
+  </section>
+
+  <section class="sec" id="s-principles">
+    <h3><span class="no">1.2</span>Judging principles</h3>
+    <div class="grid">
+      <div class="pr"><h4>Evidence over polish</h4><p>Sketches, calculations, photos and logs count. A hand-drawn design with sound reasoning can beat a polished CAD with none.</p></div>
+      <div class="pr"><h4>Show it, don't promise it</h4><p>Only work already done, or plans backed by a document (budget, letter, dated timeline), earn points.</p></div>
+      <div class="pr"><h4>Judge the journey</h4><p>Scores reflect what a team did with the time, people and resources it had.</p></div>
+      <div class="pr"><h4>Same criteria for all</h4><p>Teams are placed in two cohorts (A and B) with separate podiums. Rubrics, questions and standards are identical.</p></div>
+      <div class="pr"><h4>Encourage first</h4><p>Judges ask, listen and guide. The goal is learning, not ranking.</p></div>
+    </div>
+  </section>
+
+  <section class="sec" id="s-flow">
+    <h3><span class="no">1.3</span>Judging flow</h3>
+    <p class="cap">Table 1-1: Event schedule</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Time</th><th>Stage</th><th>What happens</th></tr></thead>
+      <tbody>
+        <tr><td class="t">8:00-9:00</td><th>Poster and document review</th><td>Judges read each team's poster and 2-page document.</td></tr>
+        <tr><td class="t">9:00-12:30</td><th>Team interview</th><td>Closed room, 2 judges per team. 8 min team presentation, 12 min Q&amp;A.</td></tr>
+        <tr><td class="t">9:00-12:30 and 1:30-3:30</td><th>Mystery Mission</th><td>Separate 2-judge panel. Surprise challenge, 15 min per team, staggered around interviews and pit visits.</td></tr>
+        <tr><td class="t">12:30-1:30</td><th>Shortlist deliberation</th><td>All judges pick 3-4 finalists per award.</td></tr>
+        <tr><td class="t">1:30-3:30</td><th>Pit interviews</th><td>Award panels visit the shortlisted pits.</td></tr>
+        <tr><td class="t">3:30-4:30</td><th>Final deliberation</th><td>Award winners first, then Best Overall.</td></tr>
+        <tr><td class="t">5:00-6:00</td><th>Ceremony</th><td>All teams.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="sec" id="s-docs">
+    <h3><span class="no">1.4</span>Documentation</h3>
+    <p class="lead">Each team submits a <b>1-page poster</b> and a <b>2-page document</b> before the event. Together they work like an FTC engineering portfolio: judges read both before the interview and use them for every award.</p>
+    <p class="cap">Table 1-2: 1-page poster</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Section</th><th>What to include</th></tr></thead>
+      <tbody>
+        <tr><th>Team and journey</th><td>How the team formed and what has happened so far.</td></tr>
+        <tr><th>Roles</th><td>Who does what.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="cap">Table 1-3: 2-page document</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Section</th><th>What to include</th></tr></thead>
+      <tbody>
+        <tr><th>Design and strategy</th><td>Robot design highlights and game strategy.</td></tr>
+        <tr><th>Funding and sustainability</th><td>Budget, sponsors or school support, and the plan for next season.</td></tr>
+        <tr><th>Outreach</th><td>Outreach done, with proof.</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout"><b>Note:</b> Optional but strongly encouraged. They are not scored on their own, and neat presentation earns no extra points. Clear, honest content is what helps judges see the team's work.</div>
+  </section>
+
+  <section class="sec" id="s-scoring">
+    <h3><span class="no">1.5</span>Scoring scale and feedback</h3>
+    <p class="cap">Table 1-4: Scoring scale, applied to every scored criterion</p>
+    <div class="tbl"><table>
+      <thead><tr><th style="text-align:center">Score</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td class="pts">0</td><td>Not shown.</td></tr>
+        <tr><td class="pts">1</td><td>Started: an idea, but little evidence.</td></tr>
+        <tr><td class="pts">2</td><td>Developing: clear work with some evidence.</td></tr>
+        <tr><td class="pts">3</td><td>Strong: clear work, backed by proof, explained by the team.</td></tr>
+      </tbody>
+    </table></div>
+    <p class="lead" style="margin-top:18px">Every team gets a one-page feedback sheet from its judges, whether or not they win an award, plus a certificate.</p>
+    <div class="gg">
+      <div><b>Glow</b><p>One thing the team did well.</p></div>
+      <div><b>Grow</b><p>The most useful next step for the real season.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== PART 2 ===================== -->
+<div class="part" id="part2">
+  <div class="part-head"><span class="k">Part 2</span><h2>Awards</h2></div>
+
+  <section class="sec" id="s-glance">
+    <h3><span class="no">2.1</span>Awards at a glance</h3>
+    <p class="cap">Table 2-1: Award list</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Award</th><th>FTC equivalent</th><th>Winners</th><th>Judges look at</th></tr></thead>
+      <tbody>
+        <tr><th>Best Overall Team</th><td>Inspire</td><td>1, open to all teams</td><td>Strength across every area</td></tr>
+        <tr><th>Engineering Excellence</th><td>Innovate, Control, Think</td><td>1st, 2nd, 3rd per cohort</td><td>Robot design and game strategy</td></tr>
+        <tr><th>Team Impact</th><td>Connect, Reach, Sustain</td><td>1st, 2nd, 3rd per cohort</td><td>Outreach done, funding and sustainability plan</td></tr>
+        <tr><th>Problem Solver</th><td></td><td>1 per cohort</td><td>Mystery Mission: questions, problem breakdown, solution, proof</td></tr>
+        <tr><th>People's Choice</th><td>Motivate</td><td>1, open to all teams</td><td>Team spirit, pit design, chants, welcome</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout"><b>Note:</b> Required criteria are the minimum a team must show to be considered. Encouraged criteria separate strong teams from developing ones. Every scored criterion uses the 0-3 scale in section 1.5.</div>
+  </section>
+
+  <section class="sec" id="s-criteria">
+    <h3><span class="no">2.2</span>Award criteria</h3>
+    <div class="tools">
+      <button type="button" id="expand">Expand all</button>
+      <button type="button" id="collapse">Collapse all</button>
+    </div>
+    <div class="cols" aria-hidden="true"><span>Award</span><span>FTC equivalent</span><span>Winners</span><span>Scoring</span></div>
+
+    <!-- Best Overall -->
+    <details id="a-best" open>
+      <summary>
+        <span class="chev"></span>
+        <span class="a-name"><i class="an">2.2.1</i>Best Overall Team</span>
+        <span class="meta"><span class="ftc"><span>Inspire</span></span><span class="win">1 winner, all teams</span><span class="sc">Consensus</span></span>
+      </summary>
+      <div class="a-body">
+        <p class="lead">The team that best shows the FTC way: strong in design and strategy, connected to its community, well organized, and working as one team. Judges weigh the poster, document, team interview, Mystery Mission and pit visit together, and decide by consensus. No points are added up.</p>
+        <p class="cap">Table 2-2: Best Overall Team criteria</p>
+        <div class="tbl"><table>
+          <thead><tr><th colspan="3" class="mid">Best Overall Team Criteria</th></tr></thead>
+          <tbody>
+            <tr><td class="type r">Required</td><td class="n">1</td><td>Team is shortlisted for at least two awards.</td></tr>
+            <tr><td class="type r">Required</td><td class="n">2</td><td>Every member can explain the team's robot idea and journey in their own words.</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>Design and strategy are clearly connected to each other.</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">4</td><td>The team shows real community connection and a plan to continue.</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">5</td><td>Roles are shared and the team works and communicates as one.</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">6</td><td>Poster, document, interview and pit tell the same story.</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout"><b>Disclaimer:</b> People's Choice results are not considered for Best Overall.</div>
+      </div>
+    </details>
+
+    <!-- Engineering Excellence -->
+    <details id="a-eng">
+      <summary>
+        <span class="chev"></span>
+        <span class="a-name"><i class="an">2.2.2</i>Engineering Excellence</span>
+        <span class="meta"><span class="ftc"><span>Innovate + Control + Think</span></span><span class="win">1st, 2nd, 3rd per cohort</span><span class="sc">30 points</span></span>
+      </summary>
+      <div class="a-body">
+        <p class="lead">For the team with the strongest engineering thinking on paper. No working robot is needed. A single subsystem or chassis is enough if the reasoning is sound.</p>
+        <p class="cap">Table 2-3: Engineering Excellence criteria, robot design (15 points)</p>
+        <div class="tbl"><table>
+          <thead><tr><th colspan="4" class="mid">Robot Design Criteria</th></tr></thead>
+          <tbody>
+            <tr><td class="type r">Required</td><td class="n">1</td><td>The chosen subsystem or chassis is clear and tied to the game.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type r">Required</td><td class="n">2</td><td>Motor choice is explained with torque and speed reasoning.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>At least one worked calculation (force, gear ratio, speed or vectors).</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">4</td><td>Alternatives were considered, with a reason for the final choice.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">5</td><td>CAD or sketch matches what the team describes.</td><td class="pts">0-3</td></tr>
+          </tbody>
+        </table></div>
+        <p class="cap">Table 2-4: Engineering Excellence criteria, game strategy (15 points)</p>
+        <div class="tbl"><table>
+          <thead><tr><th colspan="4" class="mid">Game Strategy Criteria</th></tr></thead>
+          <tbody>
+            <tr><td class="type r">Required</td><td class="n">1</td><td>MVP: the simplest robot and plan that scores points.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type r">Required</td><td class="n">2</td><td>Points math: cycles planned, time per cycle, expected score.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>SWOT or similar analysis of the team and the game.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">4</td><td>Plan adjusts to different opponents and alliances.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">5</td><td>Autonomous and endgame plan.</td><td class="pts">0-3</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </details>
+
+    <!-- Team Impact -->
+    <details id="a-impact">
+      <summary>
+        <span class="chev"></span>
+        <span class="a-name"><i class="an">2.2.3</i>Team Impact</span>
+        <span class="meta"><span class="ftc"><span>Connect + Reach + Sustain</span></span><span class="win">1st, 2nd, 3rd per cohort</span><span class="sc">15 points</span></span>
+      </summary>
+      <div class="a-body">
+        <p class="lead">For the team that has already connected with its community and has a real plan to keep going.</p>
+        <p class="cap">Table 2-5: Team Impact criteria</p>
+        <div class="tbl"><table>
+          <thead><tr><th colspan="4" class="mid">Team Impact Criteria</th></tr></thead>
+          <tbody>
+            <tr><td class="type r">Required</td><td class="n">1</td><td><b>Reach:</b> who they reached and how, with proof (photos, sign-in sheets, messages).</td><td class="pts">0-3</td></tr>
+            <tr><td class="type r">Required</td><td class="n">2</td><td><b>Sustainability plan:</b> budget, sponsor or school support, and a next-season timeline with named owners.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">3</td><td><b>Depth:</b> lasting effect, not a one-time event.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">4</td><td><b>Helping others:</b> mentoring or sharing knowledge with another team or school.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">5</td><td><b>Records:</b> activities and finances are documented in the 2-page document or a log.</td><td class="pts">0-3</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout"><b>Note:</b> Promises without documents score 0 on that item.</div>
+      </div>
+    </details>
+
+    <!-- Problem Solver -->
+    <details id="a-solver">
+      <summary>
+        <span class="chev"></span>
+        <span class="a-name"><i class="an">2.2.4</i>Problem Solver</span>
+        <span class="meta"><span class="ftc"></span><span class="win">1 winner per cohort</span><span class="sc">15 points</span></span>
+      </summary>
+      <div class="a-body">
+        <p class="lead">For the team that thinks best under pressure. Decided only by the Mystery Mission, a surprise challenge teams are not told about in advance. Each team gets its own unique problem (for example, a robot that loses points in endgame, or a limited budget for a new mechanism), so answers cannot be shared. Run by a separate 2-judge panel. No pit interview needed.</p>
+        <p class="cap">Table 2-6: Mystery Mission format (15 minutes per team)</p>
+        <div class="tbl"><table>
+          <thead><tr><th>Step</th><th>Time</th><th>What happens</th></tr></thead>
+          <tbody>
+            <tr><th>Brief</th><td class="t">3 min</td><td>Judges read the problem aloud.</td></tr>
+            <tr><th>Think and ask</th><td class="t">6 min</td><td>The team asks questions. Judges answer from a prepared data card and only what is asked.</td></tr>
+            <tr><th>Present</th><td class="t">6 min</td><td>The team explains its breakdown and solution, with a sketch, numbers or reasoning as proof.</td></tr>
+          </tbody>
+        </table></div>
+        <p class="cap">Table 2-7: Problem Solver criteria</p>
+        <div class="tbl"><table>
+          <thead><tr><th colspan="4" class="mid">Problem Solver Criteria</th></tr></thead>
+          <tbody>
+            <tr><td class="type r">Required</td><td class="n">1</td><td>Questions asked are relevant and dig for facts.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type r">Required</td><td class="n">2</td><td>The problem is broken into clear parts.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>The solution follows from the analysis.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">4</td><td>Proof: numbers, a sketch or a test idea back the solution.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">5</td><td>The team shares roles and ideas, with everyone contributing.</td><td class="pts">0-3</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout"><b>Note:</b> The Mystery Mission score is also considered in the Best Overall discussion.</div>
+      </div>
+    </details>
+
+    <!-- People's Choice -->
+    <details id="a-choice">
+      <summary>
+        <span class="chev"></span>
+        <span class="a-name"><i class="an">2.2.5</i>People's Choice</span>
+        <span class="meta"><span class="ftc"><span>Motivate</span></span><span class="win">1 winner, all teams</span><span class="sc">Vote</span></span>
+      </summary>
+      <div class="a-body">
+        <p class="lead">For the team that best brings energy and welcome to the event. The winner is chosen by vote. The voting method will be decided by the organizers on the day, and no judge scores apply.</p>
+        <div class="callout"><b>Disclaimer:</b> People's Choice is not considered for Best Overall.</div>
+        <p class="cap">Table 2-8: People's Choice criteria</p>
+        <div class="tbl"><table>
+          <thead><tr><th colspan="3" class="mid">People's Choice Criteria</th></tr></thead>
+          <tbody>
+            <tr><td class="type r">Required</td><td class="n">1</td><td>The team is present and welcoming at its pit during visiting hours.</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">2</td><td>Pit design tells the team's story.</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>Slogans and chants show team spirit.</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">4</td><td>Team members treat visitors and other teams kindly and explain their work.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="sec" id="s-rules">
+    <h3><span class="no">2.3</span>Eligibility and award rules</h3>
+    <p class="cap">Table 2-9: Award rules</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Rule</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><th>Hierarchy</th><td>Awards are decided in this order: Best Overall, Engineering Excellence, Team Impact, Problem Solver. A team wins at most one of these, so recognition is spread across teams.</td></tr>
+        <tr><th>People's Choice</th><td>Separate. It can go to any team, including one that wins another award. It is not considered for Best Overall.</td></tr>
+        <tr><th>Cohorts</th><td>Engineering Excellence and Team Impact each have a 1st, 2nd and 3rd place in Cohort A and in Cohort B. Problem Solver has one winner per cohort. Best Overall and People's Choice are open to all teams.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+</div>
+
+<footer>
+  <span>More than robots. Brighter tomorrows.</span>
+  <span>Pit Showcase 2026</span>
+</footer>
+
+</main>
+</div>
+
+<script>
+(function(){
+  var toc=document.getElementById('toc'), menu=document.getElementById('menu');
+  var links=[].slice.call(toc.querySelectorAll('a'));
+  var targets=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  var details=[].slice.call(document.querySelectorAll('details'));
+
+  function offset(){return window.innerWidth<=1080?72:32;}
+
+  function spy(){
+    var idx=0,off=offset()+8;
+    for(var i=0;i<targets.length;i++){
+      if(targets[i]&&targets[i].getBoundingClientRect().top<=off)idx=i;
+    }
+    links.forEach(function(l,i){l.classList.toggle('on',i===idx);});
+  }
+  window.addEventListener('scroll',spy,{passive:true});
+  window.addEventListener('resize',spy);
+  spy();
+
+  links.forEach(function(a){
+    a.addEventListener('click',function(ev){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(t&&t.tagName==='DETAILS'){
+        ev.preventDefault();
+        t.open=true;
+        t.scrollIntoView({behavior:'smooth',block:'start'});
+        try{history.replaceState(null,'',a.getAttribute('href'));}catch(e){}
+      }
+      toc.classList.remove('open');
+      if(menu)menu.setAttribute('aria-expanded','false');
+    });
+  });
+
+  if(menu)menu.addEventListener('click',function(){
+    var o=toc.classList.toggle('open');
+    menu.setAttribute('aria-expanded',o?'true':'false');
+  });
+
+  var e=document.getElementById('expand'),c=document.getElementById('collapse');
+  if(e)e.addEventListener('click',function(){details.forEach(function(d){d.open=true;});});
+  if(c)c.addEventListener('click',function(){details.forEach(function(d){d.open=false;});});
+
+  if(location.hash){
+    var h=document.querySelector(location.hash);
+    if(h&&h.tagName==='DETAILS')h.open=true;
+  }
+})();
+</script>
+
+</body>
+</html>
