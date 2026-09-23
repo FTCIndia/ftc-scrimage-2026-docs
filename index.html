@@ -92,7 +92,7 @@ td.t{width:104px;white-space:nowrap;font-weight:500;font-variant-numeric:tabular
 .tools{display:flex;gap:8px;justify-content:flex-end;margin:0 0 10px}
 button{font:inherit;font-size:13px;font-weight:500;background:#fff;color:var(--teal);border:1px solid var(--teal);padding:5px 14px;cursor:pointer}
 button:hover{background:var(--teal-tint)}
-.cols,summary{display:grid;grid-template-columns:18px minmax(0,1fr) 172px 172px 92px;column-gap:14px;align-items:center}
+.cols,summary{display:grid;grid-template-columns:18px minmax(0,1fr) 172px 172px 132px;column-gap:14px;align-items:center}
 .cols{padding:0 16px 6px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .cols span:first-child{grid-column:2}
 details{border:1px solid var(--grid);margin-bottom:8px;overflow:hidden;scroll-margin-top:var(--offset);background:#fff}
@@ -170,14 +170,13 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:14px;color:v
     <li><a href="#s-glance"><span class="no">2.1</span>Awards at a glance</a></li>
     <li><a href="#s-criteria"><span class="no">2.2</span>Award criteria</a>
       <ul>
-        <li><a href="#a-best"><span class="no">2.2.1</span>Best Overall Team</a></li>
-        <li><a href="#a-eng"><span class="no">2.2.2</span>Engineering Excellence</a></li>
-        <li><a href="#a-impact"><span class="no">2.2.3</span>Team Impact</a></li>
-        <li><a href="#a-solver"><span class="no">2.2.4</span>Problem Solver</a></li>
+        <li><a href="#a-eng"><span class="no">2.2.1</span>Engineering Excellence</a></li>
+        <li><a href="#a-impact"><span class="no">2.2.2</span>Team Impact</a></li>
+        <li><a href="#a-judges"><span class="no">2.2.3</span>Judges' Awards</a></li>
+        <li><a href="#a-best"><span class="no">2.2.4</span>Best Overall Team</a></li>
         <li><a href="#a-choice"><span class="no">2.2.5</span>People's Choice</a></li>
       </ul>
     </li>
-    <li><a href="#s-rules"><span class="no">2.3</span>Eligibility and rules</a></li>
   </ul>
 </nav>
 
@@ -186,10 +185,10 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:14px;color:v
 <header id="top">
   <div class="eyebrow">FIRST Tech Challenge &middot; Rookie practice event</div>
   <h1>Pit Showcase 2026: Awards Criteria</h1>
-  <p class="subtitle">A practice run of FTC judging, so every rookie team learns how to approach the season. Show us your team, your robot, your story.</p>
+  <p class="subtitle">A practice run of FTC judging, so every rookie team &mdash; and every rookie judge &mdash; learns how to approach the season together. Show us your team, your robot, your story.</p>
   <dl class="facts">
-    <div><dt>Teams</dt><dd>About 20</dd></div>
-    <div><dt>Judges</dt><dd>6-8</dd></div>
+    <div><dt>Teams</dt><dd>13</dd></div>
+    <div><dt>Judges</dt><dd>4&ndash;6, in 2-judge panels</dd></div>
     <div><dt>Event hours</dt><dd>8:00 am - 6:00 pm</dd></div>
     <div><dt>Robot</dt><dd>Need not be functional</dd></div>
   </dl>
@@ -201,41 +200,37 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:14px;color:v
 
   <section class="sec" id="s-purpose">
     <h3><span class="no">1.1</span>Purpose</h3>
-    <p class="lead">The Pit Showcase mirrors the real FTC judging process: portfolio, interview, pit visit, deliberation. We judge thinking, planning and teamwork, not a finished robot. Every team leaves with feedback to grow.</p>
+    <p class="lead">The Pit Showcase is here to help guide your team through the rest of the season. The interview and the feedback you get afterward are meant to show you what to focus on next, not to rank you against other teams.</p>
   </section>
 
   <section class="sec" id="s-principles">
     <h3><span class="no">1.2</span>Judging principles</h3>
     <div class="grid">
+      <div class="pr"><h4>Everyone is new to this</h4><p>Judges are experiencing FTC for the first time too. Nothing here assumes game-specific expertise &mdash; only what any first-time judge can see, ask about and understand.</p></div>
       <div class="pr"><h4>Evidence over polish</h4><p>Sketches, calculations, photos and logs count. A hand-drawn design with sound reasoning can beat a polished CAD with none.</p></div>
-      <div class="pr"><h4>Show it, don't promise it</h4><p>Only work already done, or plans backed by a document (budget, letter, dated timeline), earn points.</p></div>
-      <div class="pr"><h4>Judge the journey</h4><p>Scores reflect what a team did with the time, people and resources it had.</p></div>
-      <div class="pr"><h4>Same criteria for all</h4><p>Teams are placed in two cohorts (A and B) with separate podiums. Rubrics, questions and standards are identical.</p></div>
-      <div class="pr"><h4>Encourage first</h4><p>Judges ask, listen and guide. The goal is learning, not ranking.</p></div>
+      <div class="pr"><h4>Show it, don't promise it &mdash; gently</h4><p>With only about a week to prepare, a clear and specific plan can count alongside work already done. It doesn't need to be finished &mdash; just genuine and thought through, not vague.</p></div>
+      <div class="pr"><h4>Judge the journey</h4><p>Scores reflect what a team did with the time, people and resources it had &mdash; including a short build window.</p></div>
+      <div class="pr"><h4>Share the floor</h4><p>More than one team member should be able to speak for the team across the interview &mdash; not just a single spokesperson.</p></div>
+      <div class="pr"><h4>Encourage first</h4><p>Judges ask, listen and guide. This is a practice run to help teams learn &mdash; not a contest to find fault.</p></div>
     </div>
   </section>
 
   <section class="sec" id="s-flow">
     <h3><span class="no">1.3</span>Judging flow</h3>
-    <p class="cap">Table 1-1: Event schedule</p>
+    <p class="cap">Event schedule</p>
     <div class="tbl"><table>
       <thead><tr><th>Time</th><th>Stage</th><th>What happens</th></tr></thead>
       <tbody>
-        <tr><td class="t">8:00-9:00</td><th>Poster and document review</th><td>Judges read each team's poster and 2-page document.</td></tr>
-        <tr><td class="t">9:00-12:30</td><th>Team interview</th><td>Closed room, 2 judges per team. 8 min team presentation, 12 min Q&amp;A.</td></tr>
-        <tr><td class="t">9:00-12:30 and 1:30-3:30</td><th>Mystery Mission</th><td>Separate 2-judge panel. Surprise challenge, 15 min per team, staggered around interviews and pit visits.</td></tr>
-        <tr><td class="t">12:30-1:30</td><th>Shortlist deliberation</th><td>All judges pick 3-4 finalists per award.</td></tr>
-        <tr><td class="t">1:30-3:30</td><th>Pit interviews</th><td>Award panels visit the shortlisted pits.</td></tr>
-        <tr><td class="t">3:30-4:30</td><th>Final deliberation</th><td>Award winners first, then Best Overall.</td></tr>
-        <tr><td class="t">5:00-6:00</td><th>Ceremony</th><td>All teams.</td></tr>
+        <tr><td class="t">10:00-12:00</td><th>Team interviews</th><td>One 2-judge panel per team, about 15 minutes each. A single comprehensive conversation covers Engineering Excellence and Team Impact together &mdash; there is no separate round.</td></tr>
+        <tr><td class="t">2:00-3:00</td><th>Deliberation</th><td>Judges agree on Engineering Excellence, Team Impact and the three Judges' Awards, then confirm Best Overall.</td></tr>
       </tbody>
     </table></div>
   </section>
 
   <section class="sec" id="s-docs">
     <h3><span class="no">1.4</span>Documentation</h3>
-    <p class="lead">Each team submits a <b>1-page poster</b> and a <b>2-page document</b> before the event. Together they work like an FTC engineering portfolio: judges read both before the interview and use them for every award.</p>
-    <p class="cap">Table 1-2: 1-page poster</p>
+    <p class="lead">Each team submits a <b>1-page poster</b> and an <b>Engineering Portfolio</b> (maximum 3 pages) before the event. Judges read both before the interview and use them throughout judging. Anything beyond 3 pages in the Portfolio will not be read or considered.</p>
+    <p class="cap">1-page poster</p>
     <div class="tbl"><table>
       <thead><tr><th>Section</th><th>What to include</th></tr></thead>
       <tbody>
@@ -243,21 +238,21 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:14px;color:v
         <tr><th>Roles</th><td>Who does what.</td></tr>
       </tbody>
     </table></div>
-    <p class="cap">Table 1-3: 2-page document</p>
+    <p class="cap">Engineering Portfolio (max 3 pages)</p>
     <div class="tbl"><table>
       <thead><tr><th>Section</th><th>What to include</th></tr></thead>
       <tbody>
-        <tr><th>Design and strategy</th><td>Robot design highlights and game strategy.</td></tr>
-        <tr><th>Funding and sustainability</th><td>Budget, sponsors or school support, and the plan for next season.</td></tr>
-        <tr><th>Outreach</th><td>Outreach done, with proof.</td></tr>
+        <tr><th>Robot and plan</th><td>Robot design highlights and a simple plan for scoring points. No prior FTC strategy experience is expected.</td></tr>
+        <tr><th>Outreach</th><td>What the team has done to reach people outside the team, with any proof.</td></tr>
+        <tr><th>Funding and next steps</th><td>Budget, sponsor or school support if any, and a simple idea for continuing next season.</td></tr>
       </tbody>
     </table></div>
-    <div class="callout"><b>Note:</b> Optional but strongly encouraged. They are not scored on their own, and neat presentation earns no extra points. Clear, honest content is what helps judges see the team's work.</div>
+    <div class="callout"><b>Note:</b> Optional but encouraged. Judges don't score the Portfolio by itself, and neat presentation earns nothing extra &mdash; clear, honest content is what helps.</div>
   </section>
 
   <section class="sec" id="s-scoring">
     <h3><span class="no">1.5</span>Scoring scale and feedback</h3>
-    <p class="cap">Table 1-4: Scoring scale, applied to every scored criterion</p>
+    <p class="cap">Scoring scale, applied to every scored criterion</p>
     <div class="tbl"><table>
       <thead><tr><th style="text-align:center">Score</th><th>Meaning</th></tr></thead>
       <tbody>
@@ -281,15 +276,15 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:14px;color:v
 
   <section class="sec" id="s-glance">
     <h3><span class="no">2.1</span>Awards at a glance</h3>
-    <p class="cap">Table 2-1: Award list</p>
+    <p class="cap">Award list</p>
     <div class="tbl"><table>
       <thead><tr><th>Award</th><th>FTC equivalent</th><th>Winners</th><th>Judges look at</th></tr></thead>
       <tbody>
-        <tr><th>Best Overall Team</th><td>Inspire</td><td>1, open to all teams</td><td>Strength across every area</td></tr>
-        <tr><th>Engineering Excellence</th><td>Innovate, Control, Think</td><td>1st, 2nd, 3rd per cohort</td><td>Robot design and game strategy</td></tr>
-        <tr><th>Team Impact</th><td>Connect, Reach, Sustain</td><td>1st, 2nd, 3rd per cohort</td><td>Outreach done, funding and sustainability plan</td></tr>
-        <tr><th>Problem Solver</th><td></td><td>1 per cohort</td><td>Mystery Mission: questions, problem breakdown, solution, proof</td></tr>
-        <tr><th>People's Choice</th><td>Motivate</td><td>1, open to all teams</td><td>Team spirit, pit design, chants, welcome</td></tr>
+        <tr><th>Engineering Excellence</th><td>Innovate, Control, Think</td><td>1st, 2nd, 3rd of 13</td><td>Robot design and a simple plan for scoring points</td></tr>
+        <tr><th>Team Impact</th><td>Connect, Reach, Sustain</td><td>1st, 2nd, 3rd of 13</td><td>Outreach already done, and a plan to keep going</td></tr>
+        <tr><th>Judges' Awards</th><td></td><td>3 awards, judges' choice</td><td>Anything the panel wants to celebrate &mdash; not scored on a rubric</td></tr>
+        <tr><th>Best Overall Team</th><td>Inspire</td><td>1, open to all teams</td><td>The combination of Engineering Excellence and Team Impact</td></tr>
+        <tr><th>People's Choice</th><td>Motivate</td><td>Every team, individually</td><td>Their mentor's pick &mdash; not a competition</td></tr>
       </tbody>
     </table></div>
     <div class="callout"><b>Note:</b> Required criteria are the minimum a team must show to be considered. Encouraged criteria separate strong teams from developing ones. Every scored criterion uses the 0-3 scale in section 1.5.</div>
@@ -303,60 +298,24 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:14px;color:v
     </div>
     <div class="cols" aria-hidden="true"><span>Award</span><span>FTC equivalent</span><span>Winners</span><span>Scoring</span></div>
 
-    <!-- Best Overall -->
-    <details id="a-best" open>
-      <summary>
-        <span class="chev"></span>
-        <span class="a-name"><i class="an">2.2.1</i>Best Overall Team</span>
-        <span class="meta"><span class="ftc"><span>Inspire</span></span><span class="win">1 winner, all teams</span><span class="sc">Consensus</span></span>
-      </summary>
-      <div class="a-body">
-        <p class="lead">The team that best shows the FTC way: strong in design and strategy, connected to its community, well organized, and working as one team. Judges weigh the poster, document, team interview, Mystery Mission and pit visit together, and decide by consensus. No points are added up.</p>
-        <p class="cap">Table 2-2: Best Overall Team criteria</p>
-        <div class="tbl"><table>
-          <thead><tr><th colspan="3" class="mid">Best Overall Team Criteria</th></tr></thead>
-          <tbody>
-            <tr><td class="type r">Required</td><td class="n">1</td><td>Team is shortlisted for at least two awards.</td></tr>
-            <tr><td class="type r">Required</td><td class="n">2</td><td>Every member can explain the team's robot idea and journey in their own words.</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>Design and strategy are clearly connected to each other.</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">4</td><td>The team shows real community connection and a plan to continue.</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">5</td><td>Roles are shared and the team works and communicates as one.</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">6</td><td>Poster, document, interview and pit tell the same story.</td></tr>
-          </tbody>
-        </table></div>
-        <div class="callout"><b>Disclaimer:</b> People's Choice results are not considered for Best Overall.</div>
-      </div>
-    </details>
-
     <!-- Engineering Excellence -->
-    <details id="a-eng">
+    <details id="a-eng" open>
       <summary>
         <span class="chev"></span>
-        <span class="a-name"><i class="an">2.2.2</i>Engineering Excellence</span>
-        <span class="meta"><span class="ftc"><span>Innovate + Control + Think</span></span><span class="win">1st, 2nd, 3rd per cohort</span><span class="sc">30 points</span></span>
+        <span class="a-name"><i class="an">2.2.1</i>Engineering Excellence</span>
+        <span class="meta"><span class="ftc"><span>Innovate + Control + Think</span></span><span class="win">1st, 2nd, 3rd of 13</span><span class="sc">15 points</span></span>
       </summary>
       <div class="a-body">
-        <p class="lead">For the team with the strongest engineering thinking on paper. No working robot is needed. A single subsystem or chassis is enough if the reasoning is sound.</p>
-        <p class="cap">Table 2-3: Engineering Excellence criteria, robot design (15 points)</p>
+        <p class="lead">For the team with the clearest engineering thinking, from robot design to a simple plan for scoring points. No working robot is needed, and no prior FTC game experience is assumed of judges or teams. A single subsystem or chassis is enough if the reasoning is sound.</p>
+        <p class="cap">Engineering Excellence criteria (15 points)</p>
         <div class="tbl"><table>
-          <thead><tr><th colspan="4" class="mid">Robot Design Criteria</th></tr></thead>
+          <thead><tr><th colspan="4" class="mid">Engineering Excellence Criteria</th></tr></thead>
           <tbody>
-            <tr><td class="type r">Required</td><td class="n">1</td><td>The chosen subsystem or chassis is clear and tied to the game.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type r">Required</td><td class="n">2</td><td>Motor choice is explained with torque and speed reasoning.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>At least one worked calculation (force, gear ratio, speed or vectors).</td><td class="pts">0-3</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">4</td><td>Alternatives were considered, with a reason for the final choice.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">5</td><td>CAD or sketch matches what the team describes.</td><td class="pts">0-3</td></tr>
-          </tbody>
-        </table></div>
-        <p class="cap">Table 2-4: Engineering Excellence criteria, game strategy (15 points)</p>
-        <div class="tbl"><table>
-          <thead><tr><th colspan="4" class="mid">Game Strategy Criteria</th></tr></thead>
-          <tbody>
-            <tr><td class="type r">Required</td><td class="n">1</td><td>MVP: the simplest robot and plan that scores points.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type r">Required</td><td class="n">2</td><td>Points math: cycles planned, time per cycle, expected score.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>SWOT or similar analysis of the team and the game.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">4</td><td>Plan adjusts to different opponents and alliances.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">5</td><td>Autonomous and endgame plan.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type r">Required</td><td class="n">1</td><td>The team can point to a specific part of the robot they designed or built, and explain why they made it that way.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type r">Required</td><td class="n">2</td><td>They tried more than one idea for at least one part of the robot, and explain why they kept the one they did.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>They tested the robot (or a part or prototype of it) and can describe something they changed because of a test.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">4</td><td>They have a simple plan for how the robot will try to score points in a match &mdash; it doesn't need to be optimal, just thought through.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">5</td><td>They can show the robot, a sketch or a CAD file that matches what they're describing.</td><td class="pts">0-3</td></tr>
           </tbody>
         </table></div>
       </div>
@@ -366,56 +325,68 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:14px;color:v
     <details id="a-impact">
       <summary>
         <span class="chev"></span>
-        <span class="a-name"><i class="an">2.2.3</i>Team Impact</span>
-        <span class="meta"><span class="ftc"><span>Connect + Reach + Sustain</span></span><span class="win">1st, 2nd, 3rd per cohort</span><span class="sc">15 points</span></span>
+        <span class="a-name"><i class="an">2.2.2</i>Team Impact</span>
+        <span class="meta"><span class="ftc"><span>Connect + Reach + Sustain</span></span><span class="win">1st, 2nd, 3rd of 13</span><span class="sc">15 points</span></span>
       </summary>
       <div class="a-body">
-        <p class="lead">For the team that has already connected with its community and has a real plan to keep going.</p>
-        <p class="cap">Table 2-5: Team Impact criteria</p>
+        <p class="lead">For the team that has made a genuine first effort to connect with people outside the team, with a simple idea for keeping it going. Given the short time before this event, a small, honest effort counts as much as a big one.</p>
+        <p class="cap">Team Impact criteria (15 points)</p>
         <div class="tbl"><table>
           <thead><tr><th colspan="4" class="mid">Team Impact Criteria</th></tr></thead>
           <tbody>
-            <tr><td class="type r">Required</td><td class="n">1</td><td><b>Reach:</b> who they reached and how, with proof (photos, sign-in sheets, messages).</td><td class="pts">0-3</td></tr>
-            <tr><td class="type r">Required</td><td class="n">2</td><td><b>Sustainability plan:</b> budget, sponsor or school support, and a next-season timeline with named owners.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">3</td><td><b>Depth:</b> lasting effect, not a one-time event.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">4</td><td><b>Helping others:</b> mentoring or sharing knowledge with another team or school.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">5</td><td><b>Records:</b> activities and finances are documented in the 2-page document or a log.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type r">Required</td><td class="n">1</td><td>The team can describe at least one way they tried to reach people outside the team (their school, community or sponsors), and how.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">2</td><td>They have some simple proof of what they did &mdash; a photo, message or sign-in sheet is enough; it does not need to be polished.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>The team is structured for this work: roles are clear, with someone responsible for outreach and community connection.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">4</td><td>They can describe a next step for outreach they're already planning, even before it happens.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">5</td><td>The outreach connects to the team's own journey &mdash; who they are and why it mattered to them, matching their poster.</td><td class="pts">0-3</td></tr>
           </tbody>
         </table></div>
-        <div class="callout"><b>Note:</b> Promises without documents score 0 on that item.</div>
+        <div class="callout"><b>Note:</b> It's fine if this is small &mdash; a genuine first step counts. Judges are here to encourage, not to grade a finished program.</div>
       </div>
     </details>
 
-    <!-- Problem Solver -->
-    <details id="a-solver">
+    <!-- Judges' Awards -->
+    <details id="a-judges">
       <summary>
         <span class="chev"></span>
-        <span class="a-name"><i class="an">2.2.4</i>Problem Solver</span>
-        <span class="meta"><span class="ftc"></span><span class="win">1 winner per cohort</span><span class="sc">15 points</span></span>
+        <span class="a-name"><i class="an">2.2.3</i>Judges' Awards</span>
+        <span class="meta"><span class="ftc"></span><span class="win">3 awards, judges' choice</span><span class="sc">Consensus</span></span>
       </summary>
       <div class="a-body">
-        <p class="lead">For the team that thinks best under pressure. Decided only by the Mystery Mission, a surprise challenge teams are not told about in advance. Each team gets its own unique problem (for example, a robot that loses points in endgame, or a limited budget for a new mechanism), so answers cannot be shared. Run by a separate 2-judge panel. No pit interview needed.</p>
-        <p class="cap">Table 2-6: Mystery Mission format (15 minutes per team)</p>
+        <p class="lead">Three awards the judging panel gives at its own discretion, for anything the rubrics above don't fully capture. Judges name each award on the day and choose the team by consensus &mdash; there is no fixed rubric or points table.</p>
+        <p class="cap">Judges' Awards &mdash; things judges may consider</p>
         <div class="tbl"><table>
-          <thead><tr><th>Step</th><th>Time</th><th>What happens</th></tr></thead>
+          <thead><tr><th>Consideration</th><th>For example</th></tr></thead>
           <tbody>
-            <tr><th>Brief</th><td class="t">3 min</td><td>Judges read the problem aloud.</td></tr>
-            <tr><th>Think and ask</th><td class="t">6 min</td><td>The team asks questions. Judges answer from a prepared data card and only what is asked.</td></tr>
-            <tr><th>Present</th><td class="t">6 min</td><td>The team explains its breakdown and solution, with a sketch, numbers or reasoning as proof.</td></tr>
+            <tr><th>Growth</th><td>How far the team came from where they started, given their time and resources.</td></tr>
+            <tr><th>Teamwork</th><td>How the team handled questions together, under a little pressure.</td></tr>
+            <tr><th>Creativity</th><td>An interesting idea, pit design or way of telling their story.</td></tr>
+            <tr><th>Spirit</th><td>Warmth, welcome and enthusiasm at the pit and in the interview.</td></tr>
           </tbody>
         </table></div>
-        <p class="cap">Table 2-7: Problem Solver criteria</p>
+        <div class="callout"><b>Note:</b> A Judges' Award can go to any team, including one that also won Engineering Excellence, Team Impact or Best Overall.</div>
+      </div>
+    </details>
+
+    <!-- Best Overall -->
+    <details id="a-best">
+      <summary>
+        <span class="chev"></span>
+        <span class="a-name"><i class="an">2.2.4</i>Best Overall Team</span>
+        <span class="meta"><span class="ftc"><span>Inspire</span></span><span class="win">1 winner, all teams</span><span class="sc">Award 1 + Award 2</span></span>
+      </summary>
+      <div class="a-body">
+        <p class="lead">The team that stands out across both Engineering Excellence and Team Impact. Best Overall is not a separately scored category &mdash; it is the combination of Award 1 (Engineering Excellence) and Award 2 (Team Impact), which judges review together and confirm by consensus.</p>
+        <p class="cap">Best Overall Team &mdash; discussion points</p>
         <div class="tbl"><table>
-          <thead><tr><th colspan="4" class="mid">Problem Solver Criteria</th></tr></thead>
+          <thead><tr><th colspan="3" class="mid">Best Overall Team Discussion Points</th></tr></thead>
           <tbody>
-            <tr><td class="type r">Required</td><td class="n">1</td><td>Questions asked are relevant and dig for facts.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type r">Required</td><td class="n">2</td><td>The problem is broken into clear parts.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>The solution follows from the analysis.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">4</td><td>Proof: numbers, a sketch or a test idea back the solution.</td><td class="pts">0-3</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">5</td><td>The team shares roles and ideas, with everyone contributing.</td><td class="pts">0-3</td></tr>
+            <tr><td class="type r">Required</td><td class="n">1</td><td>The team has a strong combined standing across Engineering Excellence and Team Impact.</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">2</td><td>Every member can explain both the robot idea and the outreach story in their own words.</td></tr>
+            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>Roles are shared; the team works and communicates as one.</td></tr>
           </tbody>
         </table></div>
-        <div class="callout"><b>Note:</b> The Mystery Mission score is also considered in the Best Overall discussion.</div>
+        <div class="callout"><b>Disclaimer:</b> People's Choice is a separate, individual award given to every team and is not considered for Best Overall.</div>
       </div>
     </details>
 
@@ -424,36 +395,22 @@ footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:14px;color:v
       <summary>
         <span class="chev"></span>
         <span class="a-name"><i class="an">2.2.5</i>People's Choice</span>
-        <span class="meta"><span class="ftc"><span>Motivate</span></span><span class="win">1 winner, all teams</span><span class="sc">Vote</span></span>
+        <span class="meta"><span class="ftc"><span>Motivate</span></span><span class="win">Every team, individually</span><span class="sc">Mentor's pick</span></span>
       </summary>
       <div class="a-body">
-        <p class="lead">For the team that best brings energy and welcome to the event. The winner is chosen by vote. The voting method will be decided by the organizers on the day, and no judge scores apply.</p>
-        <div class="callout"><b>Disclaimer:</b> People's Choice is not considered for Best Overall.</div>
-        <p class="cap">Table 2-8: People's Choice criteria</p>
+        <p class="lead">Every team receives its own People's Choice recognition &mdash; this is not a single event winner. Each team's mentor picks one thing they'd like to celebrate about their own team. There is no competition here: every team gets one.</p>
+        <p class="cap">People's Choice &mdash; how it works</p>
         <div class="tbl"><table>
-          <thead><tr><th colspan="3" class="mid">People's Choice Criteria</th></tr></thead>
+          <thead><tr><th>Step</th><th>What happens</th></tr></thead>
           <tbody>
-            <tr><td class="type r">Required</td><td class="n">1</td><td>The team is present and welcoming at its pit during visiting hours.</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">2</td><td>Pit design tells the team's story.</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">3</td><td>Slogans and chants show team spirit.</td></tr>
-            <tr><td class="type e">Encouraged</td><td class="n">4</td><td>Team members treat visitors and other teams kindly and explain their work.</td></tr>
+            <tr><th>Nomination</th><td>The team's mentor picks one thing to celebrate about their own team &mdash; spirit, creativity, kindness, teamwork, improvement, or anything else. Mentor's choice.</td></tr>
+            <tr><th>Collection</th><td>Submitted at the pit or to an organiser during lunch and pit visiting (by 2:00 pm).</td></tr>
+            <tr><th>Presented</th><td>Read out for every team at the ceremony, alongside the judged awards.</td></tr>
           </tbody>
         </table></div>
+        <div class="callout"><b>Disclaimer:</b> People's Choice is not considered for Best Overall or any other award.</div>
       </div>
     </details>
-  </section>
-
-  <section class="sec" id="s-rules">
-    <h3><span class="no">2.3</span>Eligibility and award rules</h3>
-    <p class="cap">Table 2-9: Award rules</p>
-    <div class="tbl"><table>
-      <thead><tr><th>Rule</th><th>Detail</th></tr></thead>
-      <tbody>
-        <tr><th>Hierarchy</th><td>Awards are decided in this order: Best Overall, Engineering Excellence, Team Impact, Problem Solver. A team wins at most one of these, so recognition is spread across teams.</td></tr>
-        <tr><th>People's Choice</th><td>Separate. It can go to any team, including one that wins another award. It is not considered for Best Overall.</td></tr>
-        <tr><th>Cohorts</th><td>Engineering Excellence and Team Impact each have a 1st, 2nd and 3rd place in Cohort A and in Cohort B. Problem Solver has one winner per cohort. Best Overall and People's Choice are open to all teams.</td></tr>
-      </tbody>
-    </table></div>
   </section>
 </div>
 
