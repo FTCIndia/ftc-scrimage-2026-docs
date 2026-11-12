@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pit Showcase Round 2: Awards Criteria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<style>
+/* Modelled on the FTC Competition Manual: white page, navy table headers, numbered headings with a rule above,
+   italic centred table captions, orange note boxes. */
+:root{
+  color-scheme:light;
+  --bg:#ffffff; --alt:#f3f5f9; --ink:#1b212b; --muted:#535d6b; --rule:#9aa5b5; --grid:#8994a6; --line:#d7dde8;
+  --teal:#173b6c; --teal-ink:#ffffff; --teal-tint:#e8eef8; --link:#1a5fb4;
+  --orange:#d9701a; --orange-tint:#fff5ea; --green:#173b6c;
+  --hover:#eff3fa;
+  --sans:"Roboto","Helvetica Neue",Arial,sans-serif;
+  --offset:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;margin:0}
+h1,h2,h3,h4,p{margin:0}
+a{color:var(--link)}
+:focus-visible{outline:2px solid var(--link);outline-offset:2px}
+.topbar{display:none}
+
+.layout{max-width:1180px;margin-inline:auto;padding-inline:16px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:48px}
+main{padding-block:40px 80px;min-width:0}
+
+/* contents */
+.toc{position:sticky;top:0;align-self:start;max-height:100vh;overflow-y:auto;padding-block:40px 32px;font-size:13.5px;border-right:1px solid var(--line);padding-right:16px}
+.toc .doc{font-weight:700;font-size:14px;line-height:1.35;padding-bottom:12px;margin-bottom:6px;border-bottom:2px solid var(--teal);color:var(--teal)}
+.toc .doc small{display:block;font-weight:400;color:var(--muted);font-size:12.5px;margin-top:2px}
+.toc .pl{font-size:12px;font-weight:700;color:var(--ink);margin:16px 0 4px}
+.toc ul{list-style:none;margin:0;padding:0}
+.toc a{display:block;color:var(--ink);text-decoration:none;padding:4px 8px;border-left:3px solid transparent;line-height:1.4}
+.toc a:hover{background:var(--hover)}
+.toc a.on{border-left-color:var(--orange);background:var(--teal-tint);font-weight:700;color:var(--teal)}
+.toc ul ul a{padding-left:34px;font-size:13px}
+.toc .no{display:inline-block;min-width:38px;font-variant-numeric:tabular-nums;color:var(--muted)}
+.toc a.on .no{color:var(--teal)}
+
+/* title block */
+.eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+h1{font-size:clamp(28px,4.4vw,36px);font-weight:700;line-height:1.15;margin-top:6px;color:var(--teal);text-wrap:balance}
+.subtitle{margin-top:10px;color:var(--muted);font-size:16.5px;max-width:66ch}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));margin:22px 0 0;border:1px solid var(--grid)}
+.facts div{padding:9px 14px;border-left:1px solid var(--grid)}
+.facts div:first-child{border-left:0}
+.facts dt{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:1px 0 0;font-weight:500}
+dl{margin:0}
+
+/* headings */
+.part{padding-top:44px;scroll-margin-top:var(--offset)}
+.part-head{padding-bottom:10px;border-bottom:3px solid var(--teal)}
+.part-head .k{display:block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--orange)}
+h2{font-size:clamp(23px,3.4vw,28px);font-weight:700;color:var(--teal);margin-top:2px}
+.sec{margin-top:30px;padding-top:12px;border-top:1px solid var(--rule);scroll-margin-top:var(--offset)}
+h3{font-size:19px;font-weight:700;margin-bottom:12px;display:flex;gap:16px;align-items:baseline;color:var(--ink)}
+h3 .no{font-size:19px;font-weight:700;color:var(--teal);font-variant-numeric:tabular-nums;min-width:40px}
+.lead{max-width:74ch}
+.lead + .lead{margin-top:10px}
+
+/* notes: orange boxes */
+.callout,.note{margin-top:16px;border:1px solid var(--orange);border-left-width:5px;background:var(--orange-tint);padding:10px 14px;font-size:14px;max-width:none;color:var(--ink)}
+.callout b,.note b{color:#a4520c}
+
+/* tables */
+.cap{font-style:italic;font-size:13px;color:var(--muted);text-align:center;margin:20px 0 6px}
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:520px;font-size:14px}
+th,td{border:1px solid var(--grid);padding:8px 12px;vertical-align:top;text-align:left}
+thead th{background:var(--teal);color:var(--teal-ink);font-size:14px;font-weight:700;border-color:var(--teal);border-right-color:#4d6b9b}
+tbody th{font-weight:700;background:var(--alt)}
+td.n{width:44px;text-align:center;font-weight:500;font-variant-numeric:tabular-nums}
+td.pts{width:70px;text-align:center;font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
+td.type{width:112px;text-align:center;font-weight:700;white-space:nowrap;background:var(--alt)}
+td.ftcc{width:130px;font-weight:500}
+td.t{white-space:nowrap}
+td ul{margin:6px 0 0;padding-left:18px}
+td ul li{margin:2px 0}
+td ul.plain{margin:0}
+.crit-name{display:block;font-weight:700;color:var(--teal);margin-bottom:2px}
+
+/* principles / cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px}
+.pr{border:1px solid var(--grid);padding:12px 16px;border-top:4px solid var(--teal)}
+.pr h4{font-size:15px;font-weight:700;margin-bottom:3px;color:var(--teal)}
+.pr p,.pr li{font-size:14px;color:var(--ink)}
+.pr ul,.pr ol{margin:6px 0 0;padding-left:18px}
+.pr li{margin:3px 0}
+
+/* accordions */
+.tools{display:flex;gap:8px;justify-content:flex-end;margin:0 0 10px}
+button{font:inherit;font-size:13px;font-weight:500;background:#fff;color:var(--teal);border:1px solid var(--teal);padding:5px 14px;cursor:pointer}
+button:hover{background:var(--teal-tint)}
+.cols,summary{display:grid;grid-template-columns:18px minmax(0,1fr) 172px 172px 132px;column-gap:14px;align-items:center}
+.cols{padding:0 16px 6px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.cols span:first-child{grid-column:2}
+details{border:1px solid var(--grid);margin-bottom:8px;overflow:hidden;scroll-margin-top:var(--offset);background:#fff}
+details[open]{border-color:var(--teal)}
+summary{list-style:none;cursor:pointer;padding:12px 16px;min-height:52px}
+summary::-webkit-details-marker{display:none}
+summary:hover{background:var(--hover)}
+details[open] summary{background:var(--teal-tint);border-bottom:1px solid var(--teal)}
+.chev{width:8px;height:8px;border-right:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg);transition:transform .15s;justify-self:center}
+details[open] .chev{transform:rotate(45deg)}
+@media (prefers-reduced-motion:reduce){.chev{transition:none} html{scroll-behavior:auto}}
+.a-name{font-size:16px;font-weight:700;line-height:1.3;color:var(--ink)}
+.an{font-style:normal;color:var(--teal);margin-right:12px;font-variant-numeric:tabular-nums}
+.meta{display:contents}
+.ftc span{display:inline-block;border:1px solid var(--teal);color:var(--teal);font-size:12.5px;font-weight:500;padding:2px 8px;line-height:1.35;background:#fff}
+.win{font-size:13.5px;color:var(--muted)}
+.sc{font-size:13.5px;font-weight:700;font-variant-numeric:tabular-nums}
+.a-body{padding:4px 18px 22px}
+.a-body .lead{margin-top:14px;font-size:14.5px}
+
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:14px;color:var(--muted);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 24px;justify-content:space-between}
+.src{margin-top:40px;font-size:13px;color:var(--muted);max-width:90ch}
+.src b{color:var(--ink)}
+
+@media (max-width:1080px){
+  :root{--offset:64px}
+  .layout{display:block}
+  .topbar{display:flex;position:sticky;top:0;z-index:20;align-items:center;gap:12px;background:var(--teal);color:#fff;padding:10px 16px;padding-top:calc(10px + env(safe-area-inset-top,0px))}
+  .topbar b{font-size:14px;font-weight:500;flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .topbar button{background:transparent;color:#fff;border-color:#fff}
+  .topbar button:hover{background:rgba(255,255,255,.15)}
+  .toc{display:none;position:fixed;z-index:19;left:0;right:0;top:calc(52px + env(safe-area-inset-top,0px));max-height:calc(100vh - 60px);background:#fff;border-right:0;border-bottom:2px solid var(--teal);padding:6px 16px 16px;box-shadow:0 10px 24px rgba(0,0,0,.15)}
+  .toc.open{display:block}
+  .toc .doc{display:none}
+  main{padding-top:28px}
+}
+@media (max-width:720px){
+  .cols{display:none}
+  summary{grid-template-columns:18px minmax(0,1fr);row-gap:8px}
+  .meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;grid-column:2}
+  .facts div{border-left:0;border-top:1px solid var(--grid)}
+  .facts div:first-child{border-top:0}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <button type="button" id="menu" aria-expanded="false" aria-controls="toc">Contents</button>
+  <b>Pit Showcase Round 2: Awards Criteria</b>
+</div>
+
+<div class="layout">
+
+<nav class="toc" id="toc" aria-label="Contents">
+  <div class="doc">Pit Showcase Round 2<small>Awards criteria</small></div>
+
+  <div class="pl">Part 1: Judging process</div>
+  <ul>
+    <li><a href="#s-purpose"><span class="no">1.1</span>Purpose</a></li>
+    <li><a href="#s-portfolio"><span class="no">1.2</span>Engineering Portfolio</a></li>
+    <li><a href="#s-scoring"><span class="no">1.3</span>Scoring scale</a></li>
+    <li><a href="#s-prepare"><span class="no">1.4</span>How to prepare</a></li>
+  </ul>
+
+  <div class="pl">Part 2: Awards</div>
+  <ul>
+    <li><a href="#s-glance"><span class="no">2.1</span>How awards are decided</a></li>
+    <li><a href="#s-criteria"><span class="no">2.2</span>Award criteria</a>
+      <ul>
+        <li><a href="#a-eng"><span class="no">2.2.1</span>Engineering Excellence</a></li>
+        <li><a href="#a-impact"><span class="no">2.2.2</span>Team Impact</a></li>
+        <li><a href="#a-docs"><span class="no">2.2.3</span>Documentation</a></li>
+        <li><a href="#a-best"><span class="no">2.2.4</span>Best Overall Team</a></li>
+        <li><a href="#a-judges"><span class="no">2.2.5</span>Judges' Awards</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<main>
+
+<header id="top">
+  <div class="eyebrow">FIRST Tech Challenge &middot; Practice event, Round 2</div>
+  <h1>Pit Showcase Round 2: Awards Criteria</h1>
+  <p class="subtitle">A practice run of real FTC judging: the portfolio, the conversations with judges, and the robot. Every criterion is taken from a real FTC judged award, so teams learn what judges look for.</p>
+  <dl class="facts">
+    <div><dt>Portfolio</dt><dd>Cover + up to 8 pages</dd></div>
+    <div><dt>Scored areas</dt><dd>3, worth 12 points each</dd></div>
+    <div><dt>Each criterion</dt><dd>Scored 0 to 3</dd></div>
+    <div><dt>Best Overall</dt><dd>Out of 36</dd></div>
+  </dl>
+</header>
+
+<!-- ===================== PART 1 ===================== -->
+<div class="part" id="part1">
+  <div class="part-head"><span class="k">Part 1</span><h2>Judging process</h2></div>
+
+  <section class="sec" id="s-purpose">
+    <h3><span class="no">1.1</span>Purpose and what is new this round</h3>
+    <p class="lead">This round of the Pit Showcase is built to get teams ready for real FTC judging: the portfolio and the way teams talk with judges. It keeps the same encouraging spirit as last time and asks for a little more.</p>
+    <p class="lead">What is different from the first Pit Showcase:</p>
+    <div class="grid" style="margin-top:12px">
+      <div class="pr"><h4>A fuller Engineering Portfolio</h4><p>Teams may now build a longer portfolio, and it can continue last round's notebook. See section 1.2.</p></div>
+      <div class="pr"><h4>Criteria from real FTC awards</h4><p>Each criterion is tied to a real FTC judged award (Innovate, Design, Control, Connect, Reach, Sustain, and Think), so teams learn what each one looks for.</p></div>
+      <div class="pr"><h4>Concrete items</h4><p>Each area includes measurable things a team has built or done, such as a chassis that drives or money raised, scored on the same 0 to 3 scale.</p></div>
+    </div>
+  </section>
+
+  <section class="sec" id="s-portfolio">
+    <h3><span class="no">1.2</span>Engineering Portfolio</h3>
+    <p class="lead">Teams may submit a cover page plus up to 8 pages of content, and the portfolio can be a continuation of the one from the first Pit Showcase. Real FTC allows up to 15 pages of content, so 8 pages is a stepping stone toward the full notebook.</p>
+    <p class="cap">Portfolio rules</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Rule</th><th>This event</th><th>Real FTC</th></tr></thead>
+      <tbody>
+        <tr><th>Cover page</th><td>1 page with the team number. Not scored.</td><td>1 cover page, not used to evaluate awards</td></tr>
+        <tr><th>Content pages</th><td>Up to 8</td><td>No more than 15</td></tr>
+        <tr><th>Page size</th><td>US Letter or A4</td><td>US Letter or A4</td></tr>
+        <tr><th>Digital file</th><td>Under 15 MB</td><td>Under 15 MB</td></tr>
+        <tr><th>Over the limit</th><td>Extra pages are not reviewed</td><td>Extra pages are not reviewed</td></tr>
+        <tr><th>Attachments and appendix</th><td>Not accepted. Everything judged must be inside the pages.</td><td>Content outside the portfolio is not collected</td></tr>
+        <tr><th>Links and videos</th><td>Judges will not open them</td><td>Judges will not click them</td></tr>
+        <tr><th>Student names</th><td>First name and last initial only</td><td>First name and last initial only</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout"><b>Continuing last round's portfolio.</b> Teams are encouraged to build on what they already wrote. Keep pages that are still true, and add new pages for new work. Mark every page added since the last Showcase with a small "New" tag, and open the first content page with two lines on what changed since last time. Old pages count toward the 8-page limit, so condense older entries to make room.</div>
+    <p class="lead" style="margin-top:14px">The Documentation award reads the whole portfolio, but scores only how clearly it is written and organized, not how good the robot is.</p>
+  </section>
+
+  <section class="sec" id="s-scoring">
+    <h3><span class="no">1.3</span>Scoring scale</h3>
+    <p class="lead">Each criterion is scored 0 to 3 based on evidence, and the same scale is used for every criterion in every award.</p>
+    <p class="cap">Scoring scale, applied to every scored criterion</p>
+    <div class="tbl"><table>
+      <thead><tr><th style="text-align:center">Score</th><th>Meaning</th><th>What the judge saw or heard</th></tr></thead>
+      <tbody>
+        <tr><td class="pts">0</td><th>Not shown</th><td>Nothing in the portfolio or in conversation with judges</td></tr>
+        <tr><td class="pts">1</td><th>Stated</th><td>The team says it, but there is no evidence yet</td></tr>
+        <tr><td class="pts">2</td><th>Shown</th><td>Evidence in the portfolio or at the robot, but the team does not yet explain why or what they learned</td></tr>
+        <tr><td class="pts">3</td><th>Explained</th><td>Clear evidence, and the team explains what they tried, what they learned, or what comes next</td></tr>
+      </tbody>
+    </table></div>
+    <p class="cap">How scores add up</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Topic</th><th>Rule</th></tr></thead>
+      <tbody>
+        <tr><th>Totals</th><td>Each area has 4 criteria, so each area is worth 12 points. Best Overall adds the three areas for a total of 36.</td></tr>
+        <tr><th>Criteria with bullets</th><td>Give one score for the whole criterion, based on how many of its bullets the team showed: 0 for none, 1 for a few, 2 for most, and 3 for all, with the team explaining why it matters.</td></tr>
+        <tr><th>Required and Encouraged</th><td>Required criteria are what every team is expected to show, as at FTC. Encouraged criteria are where stronger teams stand out. A team that shows few Encouraged items can still score well.</td></tr>
+        <tr><th>Ties</th><td>Judges settle ties in deliberation by comparing Required criteria first.</td></tr>
+      </tbody>
+    </table></div>
+  </section>
+
+  <section class="sec" id="s-prepare">
+    <h3><span class="no">1.4</span>How teams should prepare</h3>
+    <p class="lead">The best preparation is to practice the same things FTC judging asks for: a short talk, a portfolio that backs it up, and a robot you can show and explain.</p>
+    <div class="grid" style="margin-top:14px">
+      <div class="pr"><h4>Plan the talk</h4><p>Several students should share it.</p>
+        <ol>
+          <li>Who we are, our roles, and our goals this round</li>
+          <li>The robot: one mechanism, the options we considered, and a test that changed something</li>
+          <li>Outreach: what we did, who it reached, and what happened</li>
+          <li>Our plan for the team going forward</li>
+        </ol>
+      </div>
+      <div class="pr"><h4>Get the portfolio ready</h4>
+        <ul>
+          <li>Keep it within the 8-page limit and bring a printed copy for judges.</li>
+          <li>Date every entry and write down why you decided things, not only what you did.</li>
+          <li>Mark new pages if you are continuing last round's portfolio.</li>
+        </ul>
+      </div>
+      <div class="pr"><h4>Be ready to show the robot</h4>
+        <ul>
+          <li>Have the robot powered and ready to show one working function.</li>
+          <li>Let the students who built a part explain it.</li>
+          <li>Be honest about what is not working yet and what you plan to try next. Judges respond well to teams that know their robot's weak points.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===================== PART 2 ===================== -->
+<div class="part" id="part2">
+  <div class="part-head"><span class="k">Part 2</span><h2>Awards</h2></div>
+
+  <section class="sec" id="s-glance">
+    <h3><span class="no">2.1</span>How awards are decided</h3>
+    <p class="lead">Three awards come straight from the rubrics, Best Overall adds them up, and one award is chosen without a rubric.</p>
+    <p class="cap">Award list</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Award</th><th>How it is decided</th><th>Decided by</th><th>Winners</th></tr></thead>
+      <tbody>
+        <tr><th>Engineering Excellence</th><td>Top totals out of 12 from section 2.2.1</td><td>Judges</td><td>3</td></tr>
+        <tr><th>Team Impact</th><td>Top totals out of 12 from section 2.2.2</td><td>Judges</td><td>3</td></tr>
+        <tr><th>Documentation</th><td>Top totals out of 12 from section 2.2.3</td><td>Judges</td><td>3</td></tr>
+        <tr><th>Best Overall</th><td>Highest combined total of the three areas, out of 36. It is not scored separately. Like the Inspire Award at FTC, it goes to a team that is strong across all three, positive and inclusive, with every member contributing.</td><td>Calculated</td><td>1</td></tr>
+        <tr><th>Judges' Awards</th><td>No rubric. Recognize something judges noticed that the rubrics do not capture, such as resilience, teamwork, or a standout moment. Like Judges' Choice at FTC.</td><td>Judges</td><td>3</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout"><b>Note:</b> A team can appear on more than one list at this event. At real FTC, a team can win or be runner-up for only one team judged award, and judges choose with that in mind. Judges only consider the criteria in this document, and awards go to positive examples of the criteria, not necessarily the single best team.</div>
+  </section>
+
+  <section class="sec" id="s-criteria">
+    <h3><span class="no">2.2</span>Award criteria</h3>
+    <div class="tools">
+      <button type="button" id="expand">Expand all</button>
+      <button type="button" id="collapse">Collapse all</button>
+    </div>
+    <div class="cols" aria-hidden="true"><span>Award</span><span>FTC equivalent</span><span>Winners</span><span>Scoring</span></div>
+
+    <!-- Engineering Excellence -->
+    <details id="a-eng" open>
+      <summary>
+        <span class="chev"></span>
+        <span class="a-name"><i class="an">2.2.1</i>Engineering Excellence</span>
+        <span class="meta"><span class="ftc"><span>Innovate + Design + Control</span></span><span class="win">Top 3</span><span class="sc">12 points</span></span>
+      </summary>
+      <div class="a-body">
+        <p class="lead">Engineering Excellence rewards teams that can explain and show how their robot is designed, controlled, and improved. It covers the same ground as three FTC awards: Innovate (a creative solution), Design (a well-balanced robot), and Control (sensors and software). Teams can explain things in plain words; no game-specific jargon is needed.</p>
+        <p class="cap">Engineering Excellence criteria (12 points)</p>
+        <div class="tbl"><table>
+          <thead><tr><th>#</th><th>Criterion</th><th>What the team shows</th><th>FTC award</th><th>Type</th></tr></thead>
+          <tbody>
+            <tr><td class="n">1</td><td><span class="crit-name">Robot works</span></td><td>The robot is built and does the basics:
+              <ul><li>The chassis (the drive base) is built and drives</li><li>At least one mechanism picks up, holds, or moves a game piece</li><li>At least one autonomous action, even if it is only driving forward</li><li>Two or more students can each drive it</li></ul></td><td class="ftcc">Design, Control</td><td class="type">Required</td></tr>
+            <tr><td class="n">2</td><td><span class="crit-name">Creative idea and risks</span></td><td>The team points to one new or different feature of the robot and explains:
+              <ul><li>The problem it solves and why they tried it</li><li>One way it could fail, and what they did to make it more reliable</li></ul></td><td class="ftcc">Innovate</td><td class="type">Required</td></tr>
+            <tr><td class="n">3</td><td><span class="crit-name">Design reasons</span></td><td>The team explains why the robot looks the way it does:
+              <ul><li>What it needs to do, and what they gave up to get there</li><li>How it is easy to build or repair, such as labeled parts, spare parts, or quick-swap pieces</li></ul></td><td class="ftcc">Design</td><td class="type">Required</td></tr>
+            <tr><td class="n">4</td><td><span class="crit-name">Control and consistency</span></td><td>The team names one sensor or software feature in plain words and says how often their autonomous or driver controls work:
+              <ul><li>The problem the sensor or software solves</li><li>How many times they tried it, how often it worked, and what they changed</li></ul></td><td class="ftcc">Control</td><td class="type">Encouraged</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout"><b>What this award does not score.</b> How the design work is recorded in the portfolio is scored under Documentation. Outreach, roles, and planning are scored under Team Impact.</div>
+      </div>
+    </details>
+
+    <!-- Team Impact -->
+    <details id="a-impact">
+      <summary>
+        <span class="chev"></span>
+        <span class="a-name"><i class="an">2.2.2</i>Team Impact</span>
+        <span class="meta"><span class="ftc"><span>Connect + Reach + Sustain</span></span><span class="win">Top 3</span><span class="sc">12 points</span></span>
+      </summary>
+      <div class="a-body">
+        <p class="lead">Team Impact rewards teams that grow their skills, connect with their community, and plan to keep going. It covers the same ground as three FTC awards: Connect (partnerships with the STEM community), Reach (introducing new people to FIRST), and Sustain (keeping the team going).</p>
+        <p class="cap">Team Impact criteria (12 points)</p>
+        <div class="tbl"><table>
+          <thead><tr><th>#</th><th>Criterion</th><th>What the team shows</th><th>FTC award</th><th>Type</th></tr></thead>
+          <tbody>
+            <tr><td class="n">1</td><td><span class="crit-name">Learning and connections</span></td><td>The team shows how they are growing their skills:
+              <ul><li>Written goals for what members want to learn, and the steps they are taking</li><li>A talk with a STEM professional, a mentor, or another team, and what they learned or changed afterward</li></ul></td><td class="ftcc">Connect</td><td class="type">Required</td></tr>
+            <tr><td class="n">2</td><td><span class="crit-name">Outreach done, with proof</span></td><td>At least one outreach activity is completed:
+              <ul><li>Who they wanted to reach, why, and how they chose the activity</li><li>Date, place, and number of people reached, with proof such as a photo, sign-in sheet, or thank-you note</li><li>Optional: someone new got involved because of it, such as a member, volunteer, mentor, or team</li></ul></td><td class="ftcc">Reach</td><td class="type">Required</td></tr>
+            <tr><td class="n">3</td><td><span class="crit-name">Money and budget</span></td><td>The team has a simple written budget and has raised or received money:
+              <ul><li>A list of the season's costs</li><li>The amount raised and where it came from, shown with a receipt, sponsor letter, or simple ledger</li></ul></td><td class="ftcc">Sustain</td><td class="type">Required</td></tr>
+            <tr><td class="n">4</td><td><span class="crit-name">A team that lasts</span></td><td>The team is set up to keep going:
+              <ul><li>A named owner for each big job (building, programming, documentation, outreach) and who is learning each role next</li><li>A plan to recruit new members and carry on next season</li><li>A written regular meeting schedule</li></ul></td><td class="ftcc">Sustain</td><td class="type">Encouraged</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout"><b>What this award does not score.</b> Robot design and control belong to Engineering Excellence. How the outreach pages are written and laid out belongs to Documentation.</div>
+      </div>
+    </details>
+
+    <!-- Documentation -->
+    <details id="a-docs">
+      <summary>
+        <span class="chev"></span>
+        <span class="a-name"><i class="an">2.2.3</i>Documentation</span>
+        <span class="meta"><span class="ftc"><span>Think</span></span><span class="win">Top 3</span><span class="sc">12 points</span></span>
+      </summary>
+      <div class="a-body">
+        <p class="lead">The Documentation award rewards teams whose portfolio is clear, organized, and tells the story of their season. It is scored from the portfolio alone and matches the Documentation area in FTC (the Think Award). It scores how the work is recorded, not how good the robot or the outreach is.</p>
+        <p class="cap">Documentation criteria (12 points)</p>
+        <div class="tbl"><table>
+          <thead><tr><th>#</th><th>Criterion</th><th>What the pages show</th><th>Type</th></tr></thead>
+          <tbody>
+            <tr><td class="n">1</td><td><span class="crit-name">Engineering process</span></td><td>Dated entries show the steps from problem to idea, build, and test:
+              <ul><li>At least one decision that compares two or more options and says why one was chosen</li></ul></td><td class="type">Required</td></tr>
+            <tr><td class="n">2</td><td><span class="crit-name">Lessons learned</span></td><td>Pages record something that did not work, what the team learned, and the change they made to the robot because of it:
+              <ul><li>Pages added since the last Showcase are marked as new</li></ul></td><td class="type">Required</td></tr>
+            <tr><td class="n">3</td><td><span class="crit-name">Math and data</span></td><td>Pages show the numbers behind a decision, such as a measurement, a calculation, or test results</td><td class="type">Encouraged</td></tr>
+            <tr><td class="n">4</td><td><span class="crit-name">Easy to read and complete</span></td><td>A judge can find what they need quickly:
+              <ul><li>Headings or a contents list, and captions on drawings and photos</li><li>A labeled sketch or CAD drawing of the robot</li><li>A photo of the robot being built or tested</li><li>At least one entry each about the robot build, the programming, and outreach</li></ul></td><td class="type">Required</td></tr>
+          </tbody>
+        </table></div>
+        <div class="callout"><b>What this award does not score.</b> Only what is written in the portfolio counts here. What the team says about the robot or outreach in person is scored under Engineering Excellence and Team Impact. Page and file limits are event rules, not scored.</div>
+      </div>
+    </details>
+
+    <!-- Best Overall -->
+    <details id="a-best">
+      <summary>
+        <span class="chev"></span>
+        <span class="a-name"><i class="an">2.2.4</i>Best Overall Team</span>
+        <span class="meta"><span class="ftc"><span>Inspire</span></span><span class="win">1 winner</span><span class="sc">Out of 36</span></span>
+      </summary>
+      <div class="a-body">
+        <p class="lead">The team that stands out across all three areas. Best Overall is not scored separately: it is the highest combined total of Engineering Excellence, Team Impact, and Documentation (out of 36). Like the Inspire Award at FTC, it goes to a team that is positive and inclusive, with every member contributing.</p>
+      </div>
+    </details>
+
+    <!-- Judges' Awards -->
+    <details id="a-judges">
+      <summary>
+        <span class="chev"></span>
+        <span class="a-name"><i class="an">2.2.5</i>Judges' Awards</span>
+        <span class="meta"><span class="ftc"><span>Judges' Choice</span></span><span class="win">3 awards</span><span class="sc">Consensus</span></span>
+      </summary>
+      <div class="a-body">
+        <p class="lead">Awards the judging panel gives at its own discretion, for something the rubrics do not capture, such as resilience, teamwork, or a standout moment. Judges name each award on the day and choose the team by consensus; there is no rubric or points table.</p>
+      </div>
+    </details>
+  </section>
+</div>
+
+<p class="src"><b>Sources.</b> FTC rules in this document are taken from the <a href="https://ftc-resources.firstinspires.org/ftc/game/manual">FIRST Tech Challenge Competition Manual</a> (rules A201 and A215, and sections 6.1 and 6.3) and the <a href="https://ftc-resources.firstinspires.org/ftc/event/judge-quickstart">FTC Judge Quick Start</a>, read November 2026. The criteria in this document are adapted from the FTC judged award criteria in section 6.3 of the manual (Innovate, Design, Control, Connect, Reach, Sustain, and Think) and simplified for new teams.</p>
+
+<footer>
+  <span>More than robots. Brighter tomorrows.</span>
+  <span>Pit Showcase Round 2</span>
+</footer>
+
+</main>
+</div>
+
+<script>
+(function(){
+  var toc=document.getElementById('toc'), menu=document.getElementById('menu');
+  var links=[].slice.call(toc.querySelectorAll('a'));
+  var targets=links.map(function(a){return document.querySelector(a.getAttribute('href'));});
+  var details=[].slice.call(document.querySelectorAll('details'));
+
+  function offset(){return window.innerWidth<=1080?72:32;}
+
+  function spy(){
+    var idx=0,off=offset()+8;
+    for(var i=0;i<targets.length;i++){
+      if(targets[i]&&targets[i].getBoundingClientRect().top<=off)idx=i;
+    }
+    links.forEach(function(l,i){l.classList.toggle('on',i===idx);});
+  }
+  window.addEventListener('scroll',spy,{passive:true});
+  window.addEventListener('resize',spy);
+  spy();
+
+  links.forEach(function(a){
+    a.addEventListener('click',function(ev){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(t&&t.tagName==='DETAILS'){
+        ev.preventDefault();
+        t.open=true;
+        t.scrollIntoView({behavior:'smooth',block:'start'});
+        try{history.replaceState(null,'',a.getAttribute('href'));}catch(e){}
+      }
+      toc.classList.remove('open');
+      if(menu)menu.setAttribute('aria-expanded','false');
+    });
+  });
+
+  if(menu)menu.addEventListener('click',function(){
+    var o=toc.classList.toggle('open');
+    menu.setAttribute('aria-expanded',o?'true':'false');
+  });
+
+  var e=document.getElementById('expand'),c=document.getElementById('collapse');
+  if(e)e.addEventListener('click',function(){details.forEach(function(d){d.open=true;});});
+  if(c)c.addEventListener('click',function(){details.forEach(function(d){d.open=false;});});
+
+  if(location.hash){
+    var h=document.querySelector(location.hash);
+    if(h&&h.tagName==='DETAILS')h.open=true;
+  }
+})();
+</script>
+
+</body>
+</html>
